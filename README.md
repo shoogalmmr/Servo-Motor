@@ -36,3 +36,55 @@
 ## الصوره التخطيطيه
 صوره التخطيطيه لتوصيل محركات السيرفو بـ Arduino باستخدام لوحة التوصيل Breadboar:
 
+<img src= "https://github.com/user-attachments/assets/d7919b17-ebce-401b-af00-f8cbfb3d608e" width="900" height="500">
+
+## الكود البرمجي
+الكود لتشغيل المحركات 
+```
+#include <Servo.h>
+
+
+Servo servo1;
+Servo servo2;
+Servo servo3;
+Servo servo4;
+Servo servo5;
+Servo servo6;
+
+void setup() {
+  
+  servo1.attach(4);
+  servo2.attach(5);
+  servo3.attach(6);
+  servo4.attach(7);
+  servo5.attach(8);
+  servo6.attach(9);
+}
+
+void loop() {
+  
+  testServos();
+}
+
+void testServos() {
+  
+  servo1.write(45);
+  servo2.write(45);
+  servo3.write(45);
+  servo4.write(45);
+  servo5.write(45);
+  servo6.write(45);
+  delay(1000); 
+
+  
+  servo1.write(135);
+  servo2.write(135);
+  servo3.write(135);
+  servo4.write(135);
+  servo5.write(135);
+  servo6.write(135);
+  delay(1000); 
+}
+
+
+```
